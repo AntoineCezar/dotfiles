@@ -1,0 +1,25 @@
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	df = diff
+	st = status
+	### Mistakes ###
+	# Amend last commit
+	amend = commit --amend
+	# Edit last commit
+	undo = git reset --soft HEAD^
+	### Changes ###
+	# Display condensed changes
+	changes = diff --name-status
+	dic = diff --cached
+	diffstat = diff --stat
+	# Display condensed commit history
+	oneline = log --pretty=oneline --abbrev-commit --graph --decorate
+	### SVN ###
+	svnpull = svn rebase
+	svnpush = svn dcommit
