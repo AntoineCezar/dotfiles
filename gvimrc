@@ -1,0 +1,3 @@
+"### Colors ###
+" Skin
+colorscheme wombat
