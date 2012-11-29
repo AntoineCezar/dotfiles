@@ -8,11 +8,14 @@
 	co = checkout
 	df = diff
 	st = status
+	pop = stash pop
+
 	### Mistakes ###
 	# Amend last commit
 	amend = commit --amend
 	# Edit last commit
 	undo = git reset --soft HEAD^
+
 	### Changes ###
 	# Display condensed changes
 	changes = diff --name-status
@@ -20,6 +23,7 @@
 	diffstat = diff --stat
 	# Display condensed commit history
 	oneline = log --pretty=oneline --abbrev-commit --graph --decorate
+
 	### SVN ###
 	svnpull = svn rebase
 	svnpush = svn dcommit
