@@ -3,3 +3,8 @@ alias ls="ls --color=auto"
 
 alias rm="rm -i"
 alias ll="ls -l"
+
+if which virtualenvwrapper.sh > /dev/null; then
+    PROJECT_HOME=$HOME/projects
+    . virtualenvwrapper.sh
+fi
