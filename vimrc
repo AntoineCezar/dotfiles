@@ -5,15 +5,15 @@ set nocompatible
 set backspace=indent,eol,start
 
 "### Encoding ###
-"
+" TODO: explain
 set encoding=utf-8
-"
+" TODO: explain
 setglobal fileencoding=utf-8
 
 "### Filetype ###"
-"
+" TODO: explain
 set filetype=unix
-"
+" TODO: explain
 set fileformat=unix
 
 "### Colors ###
