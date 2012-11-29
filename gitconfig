@@ -27,3 +27,5 @@
 	### SVN ###
 	svnpull = svn rebase
 	svnpush = svn dcommit
+[push]
+	default = simple
