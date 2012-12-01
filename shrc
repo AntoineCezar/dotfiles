@@ -5,6 +5,7 @@ alias rm="rm -i"
 alias ll="ls -l"
 
 if which virtualenvwrapper.sh > /dev/null; then
+    VIRTUALENVWRAPPER_VIRTUALENV=virtualenv2
     PROJECT_HOME=$HOME/projects
     . virtualenvwrapper.sh
 fi
