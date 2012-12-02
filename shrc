@@ -4,6 +4,17 @@ alias ls="ls --color=auto"
 alias rm="rm -i"
 alias ll="ls -l"
 
+screenshot() {
+    if which scrot > /dev/null; then
+        if [[ ! -d $HOME/screenshots ]]; then
+            mkdir $HOME/screenshots || return 1
+        fi
+        scrot -cd 5 -e 'mv $f  ~/screenshots'
+    else
+        echo "scrot not found."
+    fi
+}
+
 if which virtualenvwrapper.sh > /dev/null; then
     VIRTUALENVWRAPPER_VIRTUALENV=virtualenv2
     PROJECT_HOME=$HOME/projects
