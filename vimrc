@@ -96,6 +96,7 @@ endif
 " Enable file type detection
 filetype plugin on
 " Load plugins from ~/.vim/bundle
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 "### Utils ###
