@@ -16,8 +16,5 @@ compinit
 # Set prompt
 autoload -U promptinit && promptinit && prompt adam1
 
-# Load keybindings
-[[ -f ~/.zinputrc ]] && . ~/.zinputrc
-
 # Load common shell configuration
 [[ -f ~/.shrc ]] && . ~/.shrc
