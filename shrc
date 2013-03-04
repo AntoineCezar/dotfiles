@@ -21,3 +21,5 @@ if which virtualenvwrapper.sh > /dev/null; then
     PROJECT_HOME=$HOME/projects
     . virtualenvwrapper.sh
 fi
+
+export EDITOR="vim"
