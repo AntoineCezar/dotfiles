@@ -95,9 +95,26 @@ endif
 "### Plugins ###
 " Enable file type detection
 filetype plugin on
-" Load plugins from ~/.vim/bundle
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+" Vundle plugin manager
+if filewritable(expand("~/.vim/bundle/vundle")) == 2
+  " Load Vundle
+  set runtimepath+=~/.vim/bundle/vundle/
+  call vundle#rc()
+  " Plugin manger 
+  Bundle 'gmarik/vundle'
+  " Python IDE
+  Bundle 'klen/python-mode'
+  " Syntax checking
+  Bundle 'scrooloose/syntastic'
+  " Code snippets
+  Bundle 'SirVer/ultisnips'
+  " Transparent editing of gpg encrypted files
+  Bundle 'jamessan/vim-gnupg'
+  " Full path fuzzy file, buffer, mru, tag, ... finder for Vim
+  Bundle 'kien/ctrlp.vim'
+  " Displays the tags of the current file in a sidebar
+  Bundle 'majutsushi/tagbar'
+endif
 
 "### Utils ###
 " Convenient command to see the difference between the current buffer and the
