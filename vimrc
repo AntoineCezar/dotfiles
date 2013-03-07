@@ -4,6 +4,9 @@ set nocompatible
 " Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode.
 set backspace=indent,eol,start
 
+" Automatic line wrap
+set textwidth=80
+
 "### Encoding ###
 " TODO: explain
 set encoding=utf-8
@@ -36,7 +39,7 @@ colorscheme wombat256
 "### Indentation ###
 " autoindent/smartindent n'est specifique a aucun langage et fonctionne en general moins bien que filetype
 " Copy indent from current line when starting a new line.
-set autoindent
+"set autoindent
 " Do smart autoindenting when starting a new line.
 set smartindent
 
@@ -114,6 +117,11 @@ if filewritable(expand("~/.vim/bundle/vundle")) == 2
   Bundle 'kien/ctrlp.vim'
   " Displays the tags of the current file in a sidebar
   Bundle 'majutsushi/tagbar'
+  " 
+  Bundle 'scrooloose/nerdcommenter'
+  " Displays tags in a window, ordered by class etc.
+  Bundle 'majutsushi/tagbar'
+  nmap <F8> :TagbarToggle<CR>
 endif
 
 "### Utils ###
