@@ -107,6 +107,8 @@ if filewritable(expand("~/.vim/bundle/vundle")) == 2
   Bundle 'gmarik/vundle'
   " Python IDE
   Bundle 'klen/python-mode'
+  " Enable python folding
+  let g:pymode_folding = 0
   " Syntax checking
   Bundle 'scrooloose/syntastic'
   " Code snippets
