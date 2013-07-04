@@ -4,6 +4,7 @@ alias tmux="tmux -2"
 
 alias rm="rm -i"
 alias ll="ls -l"
+alias burniso="sudo cdrecord -v dev=/dev/sr0"
 
 screenshot() {
     if which scrot > /dev/null; then
