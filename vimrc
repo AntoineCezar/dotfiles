@@ -124,6 +124,9 @@ if filewritable(expand("~/.vim/bundle/vundle")) == 2
   " Displays tags in a window, ordered by class etc.
   Bundle 'majutsushi/tagbar'
   nmap <F8> :TagbarToggle<CR>
+  " Displays tags in a window, ordered by class etc.
+  Bundle 'tpope/vim-fugitive'
+  nmap <F8> :TagbarToggle<CR>
 endif
 
 "### Utils ###
