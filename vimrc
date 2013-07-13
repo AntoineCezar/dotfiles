@@ -41,7 +41,7 @@ colorscheme wombat256
 " Copy indent from current line when starting a new line.
 "set autoindent
 " Do smart autoindenting when starting a new line.
-set smartindent
+"set smartindent
 
 "### Tabs ###
 " Number of spaces that a <Tab> in the file counts for.
@@ -97,7 +97,7 @@ endif
 
 "### Plugins ###
 " Enable file type detection
-filetype plugin on
+filetype indent plugin on
 " Vundle plugin manager
 if filewritable(expand("~/.vim/bundle/vundle")) == 2
   " Load Vundle
