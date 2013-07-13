@@ -108,7 +108,7 @@ if filewritable(expand("~/.vim/bundle/vundle")) == 2
 
   " Python IDE
   Bundle 'klen/python-mode'
-  " Enable python folding
+  """ Enable/Disable python folding
   let g:pymode_folding = 0
 
   " Syntax checking
@@ -123,11 +123,12 @@ if filewritable(expand("~/.vim/bundle/vundle")) == 2
   Bundle 'kien/ctrlp.vim'
   " Displays the tags of the current file in a sidebar
   Bundle 'majutsushi/tagbar'
-  " 
+  " Easy commenting of code
   Bundle 'scrooloose/nerdcommenter'
   " Displays tags in a window, ordered by class etc.
   Bundle 'majutsushi/tagbar'
   nmap <F8> :TagbarToggle<CR>
+
   " Displays tags in a window, ordered by class etc.
   Bundle 'tpope/vim-fugitive'
   nmap <F8> :TagbarToggle<CR>
