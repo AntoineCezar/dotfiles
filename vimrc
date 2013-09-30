@@ -55,6 +55,10 @@ set expandtab
 " Number of spaces that a <Tab> counts for while performing editing operations, like inserting a <Tab> or using <BS>.
 set softtabstop=4
 
+"### Invisible characters ###
+set list
+set listchars=tab:→ ,trail:⋅ " /!\ It's a non-breaking space /!\
+
 "### Search ###
 " Ignore case in search patterns.  Also used when searching in the tags file.
 "set ignorecase	
@@ -103,7 +107,7 @@ if filewritable(expand("~/.vim/bundle/vundle")) == 2
   " Load Vundle
   set runtimepath+=~/.vim/bundle/vundle/
   call vundle#rc()
-  " Plugin manger 
+  " Plugin manger
   Bundle 'gmarik/vundle'
 
   " Python IDE
