@@ -21,8 +21,8 @@ screenshot() {
 }
 
 if which virtualenvwrapper.sh &> /dev/null; then
-    VIRTUALENVWRAPPER_VIRTUALENV=virtualenv2
-    PROJECT_HOME=$HOME/projects
+    export VIRTUALENVWRAPPER_VIRTUALENV=virtualenv2
+    export PROJECT_HOME=$HOME/projects
     . virtualenvwrapper.sh
 fi
 
