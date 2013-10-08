@@ -110,14 +110,9 @@ if filewritable(expand("~/.vim/bundle/vundle")) == 2
   " Plugin manger
   Bundle 'gmarik/vundle'
 
-  " Python IDE
-  Bundle 'klen/python-mode'
-  """ Enable/Disable python folding
-  let g:pymode_folding = 0
-
   " Syntax checking
   Bundle 'scrooloose/syntastic'
-  let g:syntastic_python_checkers=[]
+  let g:syntastic_always_populate_loc_list=1
 
   " Code snippets
   Bundle 'SirVer/ultisnips'
