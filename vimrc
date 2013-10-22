@@ -116,21 +116,22 @@ if filewritable(expand("~/.vim/bundle/vundle")) == 2
 
   " Code snippets
   Bundle 'SirVer/ultisnips'
+
   " Transparent editing of gpg encrypted files
   Bundle 'jamessan/vim-gnupg'
+
   " Full path fuzzy file, buffer, mru, tag, ... finder for Vim
   Bundle 'kien/ctrlp.vim'
+
   " Displays the tags of the current file in a sidebar
-  Bundle 'majutsushi/tagbar'
-  " Easy commenting of code
-  Bundle 'scrooloose/nerdcommenter'
-  " Displays tags in a window, ordered by class etc.
   Bundle 'majutsushi/tagbar'
   nmap <F8> :TagbarToggle<CR>
 
-  " Displays tags in a window, ordered by class etc.
+  " Easy commenting of code
+  Bundle 'scrooloose/nerdcommenter'
+
+  " A Git wrapper
   Bundle 'tpope/vim-fugitive'
-  nmap <F8> :TagbarToggle<CR>
 endif
 
 "### Utils ###
