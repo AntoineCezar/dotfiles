@@ -132,6 +132,9 @@ if filewritable(expand("~/.vim/bundle/vundle")) == 2
 
   " A Git wrapper
   Bundle 'tpope/vim-fugitive'
+
+  " Sublime Text's awesome multiple selection feature into Vim
+  Bundle 'terryma/vim-multiple-cursors'
 endif
 
 "### Utils ###
