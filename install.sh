@@ -1,15 +1,21 @@
 #!/bin/sh
+function backup_target {
+    mv "$1" "$1.$(date +%FT%T)"
+}
 
-for name in *; do
-    if [ ! $name == "README.md" ] \
-    && [ ! $name == "install.sh" ] \
-    && [ ! $name == "config" ]; then
-        target="$HOME/.$name"
+function link_target {
+    if [ ! -h "$2" ]; then
+        backup_target "$2" ||
+        return 1
+    fi
+    ln -s "$PWD/$1" "$2" &&
+    echo "$2 -> $PWD/$1"
+}
 
-        if [ ! -h $target ]; then
-            mv $target $target.$(date +%FT%T)
-            ln -s "$PWD/$name" "$target"
-            echo "$target -> $PWD/$name"
-        fi
+for NAME in *; do
+    if [ ! "$NAME" == "README.md" ] \
+    && [ ! "$NAME" == "install.sh" ] \
+    && [ ! "$NAME" == "config" ]; then
+        link_target $NAME "$HOME/.$NAME"
     fi
 done
