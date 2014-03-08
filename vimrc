@@ -148,6 +148,12 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
       \ | wincmd p | diffthis
 endif
+if !exists(":EncryptBuffer")
+  command EncryptBuffer :%! gpg -c -
+endif
+if !exists(":DecryptBuffer")
+  command DecryptBuffer :%!gpg -d - 2> /dev/null
+endif
 
 "### Mapping ###
 let mapleader = ","
