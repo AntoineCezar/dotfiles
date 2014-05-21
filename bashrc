@@ -5,4 +5,9 @@
 PS1='[\u@\h \W]\$ '
 
 # Load common shell configuration
-[[ -f ~/.shrc ]] && . ~/.shrc
+if [ -d ~/.config/sh.d ]; then
+  for f in ~/.config/sh.d/*; do
+    [ -x "$f" ] && . "$f"
+  done
+  unset f
+fi

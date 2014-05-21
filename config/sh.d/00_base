@@ -1,0 +1,4 @@
+PATH="$HOME/.local/bin:$PATH"
+export PYTHONPATH="/usr/lib/python3.4/site-packages"
+
+export EDITOR="vim"

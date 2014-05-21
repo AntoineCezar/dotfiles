@@ -17,7 +17,12 @@ compinit
 autoload -U promptinit && promptinit && prompt adam1
 
 # Load common shell configuration
-[[ -f ~/.shrc ]] && . ~/.shrc
+if [ -d ~/.config/sh.d ]; then
+  for f in ~/.config/sh.d/*; do
+    [ -x "$f" ] && . "$f"
+  done
+  unset f
+fi
 
 # Set bash like behaviour for ctrl+left and ctrl+right
 bindkey ";5D" backward-word
