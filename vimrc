@@ -141,6 +141,12 @@ if filewritable(expand("~/.vim/bundle/vundle")) == 2
 
   " Sublime Text's awesome multiple selection feature into Vim
   Bundle 'terryma/vim-multiple-cursors'
+
+  " Using the jedi autocompletion library for VIM
+  Bundle 'davidhalter/jedi-vim'
+  let g:jedi#popup_on_dot = 0
+  let g:jedi#popup_select_first = 0
+
 endif
 
 "### Utils ###
