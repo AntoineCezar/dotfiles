@@ -116,6 +116,12 @@ if filewritable(expand("~/.vim/bundle/vundle")) == 2
 
   " Code snippets
   Bundle 'SirVer/ultisnips'
+  " To finish the install:
+  " mkdir -p ~/.vim/after/plugin/
+  " ln -s ~/.vim/bundle/ultisnips/after/plugin/* ~/.vim/after/plugin/
+  " mkdir -p ~/.vim/ftdetect
+  " ln -s ~/.vim/bundle/ultisnips/ftdetect/* " ~/.vim/ftdetect/
+  " See bug: https://bugs.launchpad.net/ultisnips/+bug/1067416
 
   " Transparent editing of gpg encrypted files
   Bundle 'jamessan/vim-gnupg'
@@ -144,6 +150,12 @@ endif
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
       \ | wincmd p | diffthis
+endif
+if !exists(":EncryptBuffer")
+  command EncryptBuffer :%! gpg -c -
+endif
+if !exists(":DecryptBuffer")
+  command DecryptBuffer :%!gpg -d - 2> /dev/null
 endif
 
 "### Mapping ###
