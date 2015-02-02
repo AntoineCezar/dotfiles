@@ -32,3 +32,5 @@
 	svnpush = svn dcommit
 [push]
 	default = simple
+[rebase]
+	autosquash = true
