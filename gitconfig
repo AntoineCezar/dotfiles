@@ -11,6 +11,9 @@
 	pop = stash pop
 
 	### Mistakes ###
+	# Add a fixup for a given commit
+	# Will be squashed with git rebase --autosquash
+	fixup = commit --fixup
 	# Amend last commit
 	amend = commit --amend
 	# Edit last commit
