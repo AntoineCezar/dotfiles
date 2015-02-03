@@ -10,11 +10,17 @@ XF86AudioPrev
 "mpc next"
 XF86AudioNext
 
-"amixer sset Master 2-"
+"volume_down"
 XF86AudioLowerVolume
 
-"amixer sset Master 2+"
+"volume_down"
+Mod2+Mod4 + KP_Subtract
+
+"volume_up"
 XF86AudioRaiseVolume
 
-"amixer sset Master toggle"
+"volume_up"
+Mod2+Mod4 + KP_Add
+
+"volume_mute"
 XF86AudioMute
