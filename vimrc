@@ -147,6 +147,8 @@ if filewritable(expand("~/.vim/bundle/vundle")) == 2
   let g:jedi#popup_on_dot = 0
   let g:jedi#popup_select_first = 0
 
+  " Define and maintain consistent coding styles.
+  Bundle 'editorconfig/editorconfig-vim'
 endif
 
 "### Utils ###
