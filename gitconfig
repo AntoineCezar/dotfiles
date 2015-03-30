@@ -9,6 +9,7 @@
 	df = diff
 	st = status
 	pop = stash pop
+	orphan = checkout --orphan
 
 	### Mistakes ###
 	# Add a fixup for a given commit
