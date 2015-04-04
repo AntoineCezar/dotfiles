@@ -18,15 +18,20 @@ autoload -U promptinit && promptinit && prompt adam1
 
 # Load common shell configuration
 if [ -d ~/.config/sh.d ]; then
-  for f in ~/.config/sh.d/*; do
-    [ -x "$f" ] && . "$f"
-  done
-  unset f
+    for f in ~/.config/sh.d/*; do
+        [ -x "$f" ] && . "$f"
+    done
+    unset f
+fi
+
+# Load common shell completion
+if [ -d ~/.config/sh_completion.d ]; then
+    for f in ~/.config/sh_completion.d/*; do
+        . "$f"
+    done
+    unset f
 fi
 
 # Set bash like behaviour for ctrl+left and ctrl+right
 bindkey ";5D" backward-word
 bindkey ";5C" forward-word
-
-[ -f "/usr/share/zsh/site-contrib/powerline.zsh" ] &&
-    . /usr/share/zsh/site-contrib/powerline.zsh
