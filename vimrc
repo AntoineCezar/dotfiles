@@ -113,6 +113,7 @@ if filewritable(expand("~/.vim/bundle/vundle")) == 2
   " Syntax checking
   Bundle 'scrooloose/syntastic'
   let g:syntastic_always_populate_loc_list=1
+  let g:syntastic_python_checkers = ['flake8', 'pylint']
 
   " Code snippets
   Bundle 'SirVer/ultisnips'
