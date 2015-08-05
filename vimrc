@@ -107,7 +107,8 @@ if filewritable(expand("~/.vim/bundle/vundle")) == 2
   " Load Vundle
   set runtimepath+=~/.vim/bundle/vundle/
   call vundle#rc()
-  " Plugin manger
+
+  " Plugin manager
   Bundle 'gmarik/vundle'
 
   " Syntax checking
@@ -115,14 +116,18 @@ if filewritable(expand("~/.vim/bundle/vundle")) == 2
   let g:syntastic_always_populate_loc_list=1
   let g:syntastic_python_checkers = ['flake8', 'pylint']
 
-  " Code snippets
+  " Code snippets manager
   Bundle 'SirVer/ultisnips'
   " To finish the install:
   " mkdir -p ~/.vim/after/plugin/
   " ln -s ~/.vim/bundle/ultisnips/after/plugin/* ~/.vim/after/plugin/
   " mkdir -p ~/.vim/ftdetect
-  " ln -s ~/.vim/bundle/ultisnips/ftdetect/* " ~/.vim/ftdetect/
+  " ln -s ~/.vim/bundle/ultisnips/ftdetect/* ~/.vim/ftdetect/
   " See bug: https://bugs.launchpad.net/ultisnips/+bug/1067416
+
+  " Code snippets
+  " Used by ultisnips
+  Bundle 'honza/vim-snippets'
 
   " Transparent editing of gpg encrypted files
   Bundle 'jamessan/vim-gnupg'
