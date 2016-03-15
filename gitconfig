@@ -25,15 +25,24 @@
 	changes = diff --name-status
 	dic = diff --cached
 	diffstat = diff --stat
-	# Display condensed commit history
-	oneline = log --pretty=oneline --abbrev-commit --graph --decorate
+	# List commits in short form
+	ls = log --pretty=oneline --abbrev-commit --decorate
+	# List commits in short form with changed files
+	ll = log --pretty=oneline --abbrev-commit --decorate --numstat
+	# List commits in short form with graph
+	lg = log --pretty=oneline --abbrev-commit --decorate --graph
 
 	### SVN ###
 	svnpull = svn rebase
 	svnpush = svn dcommit
+
+	### GitHub ###
+    pr = !hub pull-request
+
 [push]
 	default = simple
 [rebase]
 	autosquash = true
 [user]
 	name = Antoine Cezar
+	email = acezar@amg-dev.fr
