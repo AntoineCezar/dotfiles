@@ -176,3 +176,5 @@ endif
 
 "### Mapping ###
 let mapleader = ","
+
+let powerline_pycmd = "py3"
