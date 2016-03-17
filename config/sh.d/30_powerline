@@ -2,5 +2,5 @@ POWERLINE_BINDINGS="/usr/lib/python3.5/site-packages/powerline/bindings"
 POWERLINE_SHELL_BINDING="$POWERLINE_BINDINGS/$(basename $SHELL)/powerline.sh"
 
 if [ -f "$POWERLINE_SHELL_BINDING" ]; then
-    source $POWERLINE_SHELL_BINDING
+    . $POWERLINE_SHELL_BINDING
 fi
