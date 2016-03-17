@@ -1,1 +1,2 @@
+numlockx on
 setxkbmap fr
