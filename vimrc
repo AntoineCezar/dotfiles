@@ -107,62 +107,7 @@ endif
 "### Plugins ###
 " Enable file type detection
 filetype indent plugin on
-" Vundle plugin manager
-if filewritable(expand("~/.vim/bundle/vundle")) == 2
-  " Load Vundle
-  set runtimepath+=~/.vim/bundle/vundle/
-  call vundle#rc()
-
-  " Plugin manager
-  Bundle 'gmarik/vundle'
-
-  " Syntax checking
-  Bundle 'scrooloose/syntastic'
-  let g:syntastic_always_populate_loc_list=1
-  let g:syntastic_python_checkers = ['flake8', 'pylint']
-
-  " Code snippets manager
-  Bundle 'SirVer/ultisnips'
-  " To finish the install:
-  " mkdir -p ~/.vim/after/plugin/
-  " ln -s ~/.vim/bundle/ultisnips/after/plugin/* ~/.vim/after/plugin/
-  " mkdir -p ~/.vim/ftdetect
-  " ln -s ~/.vim/bundle/ultisnips/ftdetect/* ~/.vim/ftdetect/
-  " See bug: https://bugs.launchpad.net/ultisnips/+bug/1067416
-
-  " Code snippets
-  " Used by ultisnips
-  Bundle 'honza/vim-snippets'
-
-  " Transparent editing of gpg encrypted files
-  Bundle 'jamessan/vim-gnupg'
-
-  " Full path fuzzy file, buffer, mru, tag, ... finder for Vim
-  Bundle 'kien/ctrlp.vim'
-
-  " Displays the tags of the current file in a sidebar
-  Bundle 'majutsushi/tagbar'
-  nmap <F8> :TagbarToggle<CR>
-
-  " Easy commenting of code
-  Bundle 'scrooloose/nerdcommenter'
-
-  " A Git wrapper
-  Bundle 'tpope/vim-fugitive'
-
-  " Sublime Text's awesome multiple selection feature into Vim
-  Bundle 'terryma/vim-multiple-cursors'
-
-  " Using the jedi autocompletion library for VIM
-  Bundle 'davidhalter/jedi-vim'
-  let g:jedi#popup_on_dot = 0
-  let g:jedi#popup_select_first = 0
-  let g:jedi#show_call_signatures = 0
-  autocmd FileType python setlocal completeopt-=preview
-
-  " Define and maintain consistent coding styles.
-  Bundle 'editorconfig/editorconfig-vim'
-endif
+source ~/.vim/plugged.vim
 
 "### Utils ###
 " Convenient command to see the difference between the current buffer and the
