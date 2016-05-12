@@ -11,6 +11,9 @@
 	pop = stash pop
 	orphan = checkout --orphan
 
+	### gitflow ###
+	feat = flow feature
+
 	### Mistakes ###
 	# Add a fixup for a given commit
 	# Will be squashed with git rebase --autosquash
