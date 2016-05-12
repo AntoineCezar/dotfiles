@@ -2,4 +2,6 @@ if which virtualenvwrapper.sh &> /dev/null; then
     export VIRTUALENVWRAPPER_VIRTUALENV=virtualenv2
     export PROJECT_HOME=$HOME/projects
     . virtualenvwrapper.sh
+
+    alias workhere="workon $(basename $PWD)"
 fi
