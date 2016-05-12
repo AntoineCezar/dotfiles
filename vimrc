@@ -7,6 +7,11 @@ set backspace=indent,eol,start
 " Automatic line wrap
 set textwidth=80
 
+" Check if any buffers were changed outside of Vim
+au CursorHold * checktime
+"au WinEnter * checktime
+"au BufWinEnter * checktime
+
 "### Encoding ###
 " TODO: explain
 set encoding=utf-8
