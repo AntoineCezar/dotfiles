@@ -31,8 +31,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'majutsushi/tagbar'
   nmap <F8> :TagbarToggle<CR>
 
-  " Easy commenting of code
-  Plug 'scrooloose/nerdcommenter'
+  " Comment stuff out.
+  Plug 'tpope/vim-commentary'
 
   " A Git wrapper
   Plug 'tpope/vim-fugitive'
