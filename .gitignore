@@ -3,3 +3,4 @@ vim/.netrwhist
 vim/bundle/
 vim/ftdetect/
 config/sh.d/*.local
+config/xinitrc.d/*.local.sh
