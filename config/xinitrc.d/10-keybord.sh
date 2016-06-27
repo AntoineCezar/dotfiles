@@ -1,2 +1,3 @@
 numlockx on
-setxkbmap fr
+setxkbmap fr oss
+xmodmap ~/.Xmodmap
