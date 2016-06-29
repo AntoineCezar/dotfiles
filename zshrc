@@ -13,9 +13,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# Set prompt
-autoload -U promptinit && promptinit && prompt adam1
-
 # Load common shell configuration
 if [ -d ~/.config/sh.d ]; then
     for f in ~/.config/sh.d/*; do
@@ -24,14 +21,10 @@ if [ -d ~/.config/sh.d ]; then
     unset f
 fi
 
-# Load common shell completion
-if [ -d ~/.config/sh_completion.d ]; then
-    for f in ~/.config/sh_completion.d/*; do
-        . "$f"
-    done
-    unset f
+# Load zsh shell configuration
+if [ -d ~/.config/zsh.d ]; then
+  for f in ~/.config/zsh.d/*; do
+    [ -x "$f" ] && . "$f"
+  done
+  unset f
 fi
-
-# Set bash like behaviour for ctrl+left and ctrl+right
-bindkey ";5D" backward-word
-bindkey ";5C" forward-word
