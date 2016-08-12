@@ -25,7 +25,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'jamessan/vim-gnupg'
 
   " Full path fuzzy file, buffer, mru, tag, ... finder for Vim
-  Plug 'kien/ctrlp.vim'
+  Plug 'ctrlpvim/ctrlp.vim'
 
   " Displays the tags of the current file in a sidebar
   Plug 'majutsushi/tagbar'
