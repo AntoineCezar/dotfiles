@@ -4,9 +4,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'junegunn/vim-plug'
 
   " Syntax checking
-  Plug 'scrooloose/syntastic'
-  let g:syntastic_always_populate_loc_list=1
-  let g:syntastic_python_checkers = ['flake8', 'pylint']
+  Plug 'neomake/neomake'
+  autocmd! BufWritePost * Neomake
 
   " Code snippets manager
   Plug 'SirVer/ultisnips'
