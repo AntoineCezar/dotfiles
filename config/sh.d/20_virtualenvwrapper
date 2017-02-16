@@ -1,8 +1,0 @@
-if which virtualenvwrapper.sh &> /dev/null; then
-    export PROJECT_HOME=$HOME/projects
-    . virtualenvwrapper.sh
-
-    function workhere() {
-        workon $(basename $PWD)
-    }
-fi
