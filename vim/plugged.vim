@@ -6,9 +6,11 @@ call plug#begin('~/.vim/plugged')
   " Color schemes
   Plug 'kristijanhusak/vim-hybrid-material'
 
-  " Syntax checking
-  Plug 'neomake/neomake'
-  autocmd! BufWritePost * Neomake
+  " Asynchronous Lint Engine
+  Plug 'w0rp/ale'
+  " Load all plugins now.
+  " Plugins need to be added to runtimepath before helptags can be generated.
+  packloadall
 
   " Code snippets manager
   Plug 'SirVer/ultisnips'
