@@ -93,20 +93,20 @@ set showcmd
 "### Vim Dirs ###
 " Create and set the directory for the swap file
 if filewritable(expand("~/.vim/swap")) == 2
-  set directory=$HOME/.vim/swap
+  set directory=$HOME/.vim/swap//
 else
   if has("unix") || has("win32unix")
     call system("mkdir $HOME/.vim/swap -p")
-    set directory=$HOME/.vim/swap
+    set directory=$HOME/.vim/swap//
   endif
 endif
 " Create and set the directory for the backup file
 if filewritable(expand("~/.vim/backup")) == 2
-  set backupdir=$HOME/.vim/backup
+  set backupdir=$HOME/.vim/backup//
 else
   if has("unix") || has("win32unix")
     call system("mkdir $HOME/.vim/backup -p")
-    set backupdir=$HOME/.vim/backup
+    set backupdir=$HOME/.vim/backup//
   endif
 endif
 
