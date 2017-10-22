@@ -54,7 +54,5 @@ call plug#begin('~/.vim/plugged')
   " Define and maintain consistent coding styles.
   Plug 'editorconfig/editorconfig-vim'
 
-  " undo history visualizer
-  Plug 'mbbill/undotree'
 
 call plug#end()
