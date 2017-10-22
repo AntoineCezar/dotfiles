@@ -3,6 +3,9 @@ call plug#begin('~/.vim/plugged')
   " Plugin manager
   Plug 'junegunn/vim-plug'
 
+  " Color schemes
+  Plug 'kristijanhusak/vim-hybrid-material'
+
   " Syntax checking
   Plug 'neomake/neomake'
   autocmd! BufWritePost * Neomake
