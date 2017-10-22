@@ -24,6 +24,11 @@ set filetype=unix
 " TODO: explain
 set fileformat=unix
 
+"### Plugins ###
+" Enable file type detection
+filetype indent plugin on
+source ~/.vim/plugged.vim
+
 "### Colors ###
 " When set to "dark", Vim will try to use colors that look good on a dark background.
 " When set to "light", Vim will try to use colors that look good on a light background.
@@ -103,11 +108,6 @@ else
     set backupdir=$HOME/.vim/backup
   endif
 endif
-
-"### Plugins ###
-" Enable file type detection
-filetype indent plugin on
-source ~/.vim/plugged.vim
 
 "### Utils ###
 " Convenient command to see the difference between the current buffer and the
