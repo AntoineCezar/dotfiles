@@ -54,5 +54,8 @@ call plug#begin('~/.vim/plugged')
   " Define and maintain consistent coding styles.
   Plug 'editorconfig/editorconfig-vim'
 
+  " Simple, correct folding for Python
+  Plug 'tmhedberg/SimpylFold'
+  set foldlevelstart=3
 
 call plug#end()
