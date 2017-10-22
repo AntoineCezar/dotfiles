@@ -1,8 +1,7 @@
 config/sh.d/*.local
 config/xinitrc.d/*.local.sh
-nvim/.netrwhist
 vim/.netrwhist
-vim/bundle/
+vim/plugged/
 vim/ftdetect/
 vim/swap/
 gitconfig.local
