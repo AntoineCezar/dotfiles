@@ -5,3 +5,4 @@ vim/.netrwhist
 vim/bundle/
 vim/ftdetect/
 vim/swap/
+gitconfig.local

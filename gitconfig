@@ -1,7 +1,11 @@
+[include]
+    path = .gitconfig.local
+
 [color]
 	diff = auto
 	status = auto
 	branch = auto
+
 [alias]
 	br = branch
 	ci = commit
@@ -44,7 +48,6 @@
 
 [push]
 	default = simple
+
 [rebase]
 	autosquash = true
-[user]
-	name = Antoine Cezar
