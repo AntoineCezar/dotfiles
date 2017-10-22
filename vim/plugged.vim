@@ -58,4 +58,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tmhedberg/SimpylFold'
   set foldlevelstart=3
 
+  " Delete, change and add, parentheses, brackets, quotes, XML tags, and more
+  Plug 'tpope/vim-surround'
+
 call plug#end()
