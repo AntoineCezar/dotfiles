@@ -1,5 +1,7 @@
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+if [[ -z "$HISTFILE" ]]; then
+    HISTFILE=~/.histfile
+fi
 HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory
