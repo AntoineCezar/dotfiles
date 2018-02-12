@@ -129,3 +129,6 @@ endif
 let mapleader = ","
 
 let powerline_pycmd = "py3"
+
+" Force write a file opened without root privilege
+cmap w!! w !sudo tee % > /dev/null
