@@ -61,6 +61,9 @@ call plug#begin('~/.vim/plugged')
   " Delete, change and add, parentheses, brackets, quotes, XML tags, and more
   Plug 'tpope/vim-surround'
 
+  " Management of tags files in Vim
+  Plug 'ludovicchabant/vim-gutentags'
+
   if has('nvim')
     " Real-time collaborative editing.
     Plug 'floobits/floobits-neovim'
