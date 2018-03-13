@@ -41,6 +41,9 @@ call plug#begin('~/.vim/plugged')
   " A Git wrapper
   Plug 'tpope/vim-fugitive'
 
+  " Shows a git diff in the 'gutter' (sign column)
+  Plug 'airblade/vim-gitgutter'
+
   " Sublime Text's awesome multiple selection feature into Vim
   Plug 'terryma/vim-multiple-cursors'
 
