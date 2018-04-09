@@ -1,0 +1,9 @@
+#!/bin/bash
+SESSION_PATH=$(realpath "$PWD")
+SESSION_NAME=$(basename "$SESSION_PATH" | sed 's/[^0-9a-zA-Z_-]\+/_/g')
+SESSION_BIN="$SESSION_PATH/.local/bin"
+
+export HISTFILE="$SESSION_PATH/.histfile"
+[ -e "$SESSION_BIN" ] && PATH="$SESSION_BIN:$PATH"
+
+tmux new-session -As $SESSION_NAME
