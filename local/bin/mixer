@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [[ "$TERM" == "linux" ]]; then
+    xfce4-terminal --command="alsamixer"
+else
+    alsamixer
+fi
