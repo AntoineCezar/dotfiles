@@ -52,6 +52,10 @@
 
 [pull]
 	ff = only
+	rebase = preserve
 
 [rebase]
 	autosquash = true
+
+[branch]
+	autosetuprebase = always
