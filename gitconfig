@@ -2,53 +2,74 @@
     path = .gitconfig.local
 
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+    diff = auto
+    status = auto
+    branch = auto
 
 [alias]
-	br = branch
-	ci = commit
-	co = checkout
-	df = diff
-	st = status
-	pop = stash pop
-	orphan = checkout --orphan
-	publish = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
+    br = branch
+    ci = commit
+    co = checkout
+    df = diff
+    st = status
+    pop = stash pop
+    orphan = checkout --orphan
+    # Push a not yet published branch and set upstream
+    publish = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
+    # Update default branch and rebase current branch on it
+    update = "!f () { \
+        set -e ;\
+        if [ ! -e \".git/default-branch\" ]; then \
+            echo \"Missing .git/default-branch\" ;\
+            return 1 ;\
+        fi;\
+        DEFAULT_BRANCH=$(cat .git/default-branch);\
+        CURRRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD);\
+        if [ \"$CURRRENT_BRANCH\" != \"$DEFAULT_BRANCH\" ]; then\
+            git stash;\
+            git checkout $DEFAULT_BRANCH;\
+        fi;\
+        git pull --rebase --prune;\
+        if [ \"$CURRRENT_BRANCH\" != \"$DEFAULT_BRANCH\" ]; then\
+            git checkout $CURRRENT_BRANCH;\
+            git rebase $DEFAULT_BRANCH;\
+            git stash pop;\
+        fi;\
+    }; f"
 
-	### gitflow ###
-	feature = flow feature
+    ### gitflow ###
+    feature = flow feature
 
-	### Mistakes ###
-	# Add a fixup for a given commit
-	# Will be squashed with git rebase --autosquash
-	fixup = commit --fixup
-	# Amend last commit
-	amend = commit --amend
-	# Edit last commit
-	undo = reset --soft HEAD^
+    ### Mistakes ###
+    # Add a fixup for a given commit
+    # Will be squashed with git rebase --autosquash
+    fixup = commit --fixup
+    # Amend last commit
+    amend = commit --amend
+    # Edit last commit
+    undo = reset --soft HEAD^
 
-	### Changes ###
-	# Display condensed changes
-	changes = diff --name-status
-	dic = diff --cached
-	diffstat = diff --stat
-	# List commits in short form
-	ls = log --pretty=oneline --abbrev-commit --decorate
-	# List commits in short form with changed files
-	ll = log --pretty=oneline --abbrev-commit --decorate --numstat
-	# List commits in short form with graph
-	lg = log --pretty=oneline --abbrev-commit --decorate --graph
+    ### Changes ###
+    # Display condensed changes
+    changes = diff --name-status
+    dic = diff --cached
+    diffstat = diff --stat
+    # List commits in short form
+    ls = log --pretty=oneline --abbrev-commit --decorate
+    # List commits in short form with changed files
+    ll = log --pretty=oneline --abbrev-commit --decorate --numstat
+    # List commits in short form with graph
+    lg = log --pretty=oneline --abbrev-commit --decorate --graph
 
-	### SVN ###
-	svnpull = svn rebase
-	svnpush = svn dcommit
+    ### SVN ###
+    svnpull = svn rebase
+    svnpush = svn dcommit
 
-	### GitHub ###
+    ### GitHub ###
     pr = !hub pull-request
 
 [push]
-	default = simple
+    default = simple
 
 [pull]
 	ff = only
