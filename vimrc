@@ -7,6 +7,9 @@ set backspace=indent,eol,start
 " Automatic line wrap
 set textwidth=80
 
+" Highlight columns over 80
+let &colorcolumn=join(range(81,999),",")
+
 " Check if any buffers were changed outside of Vim
 au CursorHold * checktime
 "au WinEnter * checktime
