@@ -1,3 +1,5 @@
-numlockx on
+#!/bin/sh
 setxkbmap fr oss
-xmodmap ~/.Xmodmap
+which numlockx && numlockx on
+which xbindkeys && xbindkeys
+which xmodmap && [ -f "$HOME/.Xmodmap" ] && xmodmap "$HOME/.Xmodmap"
