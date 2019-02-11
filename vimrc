@@ -48,7 +48,8 @@ if &t_Co > 2 || has("gui_running")
 endif
 " Skin
 " colorscheme wombat256
-colorscheme hybrid_material
+" colorscheme hybrid_material
+colorscheme nord
 
 "### Indentation ###
 " autoindent/smartindent n'est specifique a aucun langage et fonctionne en general moins bien que filetype
