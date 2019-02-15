@@ -132,6 +132,9 @@ call plug#begin('~/.vim/plugged')
   " PlantUML: language support
   Plug 'aklt/plantuml-syntax'
 
+  " Manage simple todo lists
+  Plug 'vitalk/vim-simple-todo'
+
   " Nvim:
   if has('nvim')
     " Real-time collaborative editing.
