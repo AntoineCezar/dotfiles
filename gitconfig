@@ -10,6 +10,7 @@
     br = branch
     ci = commit
     co = checkout
+    cob = checkout -b
     df = diff
     st = status
     pop = stash pop
