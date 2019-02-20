@@ -131,6 +131,7 @@ endif
 
 "### Mapping ###
 let mapleader = ","
+let maplocalleader = ";"
 
 let powerline_pycmd = "py3"
 
