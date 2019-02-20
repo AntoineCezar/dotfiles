@@ -135,6 +135,9 @@ call plug#begin('~/.vim/plugged')
   " Manage simple todo lists
   Plug 'vitalk/vim-simple-todo'
 
+  " Sessions: automated creation and restoration
+  Plug 'zhimsel/vim-stay'
+
   " Nvim:
   if has('nvim')
     " Real-time collaborative editing.
