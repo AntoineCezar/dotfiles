@@ -1,6 +1,6 @@
 " Automatic line wrap
-set textwidth=79
-set colorcolumn=79
+set textwidth=80
+set colorcolumn=80
 
 "### Tabs ###
 " Number of spaces that a <Tab> in the file counts for.
