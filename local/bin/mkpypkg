@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+import sys
+import pathlib
+
+
+working_directory = pathlib.Path('.').resolve()
+
+
+def make_package(root: pathlib.Path, path: pathlib.Path):
+    if not path.exists():
+        print(f'create {path.relative_to(root)}')
+        path.mkdir(parents=True)
+
+    init_file = path / '__init__.py'
+    if not init_file.exists():
+        print(f'create {init_file.relative_to(root)}')
+        init_file.write_text('')
+
+    if path.parent != root:
+        make_package(root, path.parent)
+
+
+for item in sys.argv[1:]:
+    path = pathlib.Path(item).resolve()
+    make_package(working_directory, path)
