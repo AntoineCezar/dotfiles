@@ -131,16 +131,13 @@ call plug#begin('~/.vim/plugged')
   " PlantUML: language support
   Plug 'aklt/plantuml-syntax'
 
+  " VueJs: language support
+  Plug 'posva/vim-vue'
+
   " Manage simple todo lists
   Plug 'vitalk/vim-simple-todo'
 
   " Sessions: automated creation and restoration
   Plug 'zhimsel/vim-stay'
-
-  " Nvim:
-  if has('nvim')
-    " Real-time collaborative editing.
-    Plug 'floobits/floobits-neovim'
-  endif
 
 call plug#end()
