@@ -1,5 +1,4 @@
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+. /etc/bash.bashrc
 
 # Load common shell configuration
 if [ -d ~/.config/sh.d ]; then
