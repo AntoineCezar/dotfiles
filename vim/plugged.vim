@@ -95,6 +95,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'tmhedberg/SimpylFold'
   set foldlevelstart=3
 
+  " Python: code formating
+  Plug 'ambv/black'
+
   " Asciidoc: language support
   Plug 'asciidoc/vim-asciidoc'
 
