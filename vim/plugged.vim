@@ -4,10 +4,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/vim-plug'
 
   " Color schemes
-  Plug 'arcticicestudio/nord-vim'
   Plug 'kristijanhusak/vim-hybrid-material'
   Plug 'morhetz/gruvbox'
-  Plug 'sickill/vim-monokai'
 
   " Git: A Git wrapper
   Plug 'tpope/vim-fugitive'
