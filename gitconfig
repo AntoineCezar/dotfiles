@@ -17,26 +17,6 @@
     orphan = checkout --orphan
     # Push a not yet published branch and set upstream
     publish = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
-    # Update default branch and rebase current branch on it
-    update = "!f () { \
-        set -e ;\
-        if [ ! -e \".git/default-branch\" ]; then \
-            echo \"Missing .git/default-branch\" ;\
-            return 1 ;\
-        fi;\
-        DEFAULT_BRANCH=$(cat .git/default-branch);\
-        CURRRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD);\
-        if [ \"$CURRRENT_BRANCH\" != \"$DEFAULT_BRANCH\" ]; then\
-            git stash;\
-            git checkout $DEFAULT_BRANCH;\
-        fi;\
-        git pull --rebase --prune;\
-        if [ \"$CURRRENT_BRANCH\" != \"$DEFAULT_BRANCH\" ]; then\
-            git checkout $CURRRENT_BRANCH;\
-            git rebase $DEFAULT_BRANCH;\
-            git stash pop;\
-        fi;\
-    }; f"
 
     ### gitflow ###
     feature = flow feature

@@ -1,0 +1,150 @@
+#!/usr/bin/env python
+import sys
+import subprocess
+import shlex
+
+
+CSI = '\x1b['
+NORMAL = f'{CSI}0m'
+BOLD = f'{CSI}1m'
+UNDERLINE = f'{CSI}4m'
+BACK = f'{CSI}1D'
+
+
+def run(command):
+    return subprocess.check_output(shlex.split(command)).decode()
+
+
+def get_current_branch():
+    return run('git branch --show-current').strip()
+
+
+def list_branches():
+    return set([
+        name.replace('*', '').strip()
+        for name in run('git branch').splitlines()
+    ])
+
+
+def checkout_branch(name):
+    run(f'git checkout {name}')
+
+
+def pull_branch(name):
+    run('git pull --rebase --prune')
+
+
+def delete_branch(name, safe_branch, confirm=True):
+    if confirm:
+        ask(f'Delete branch "{name}"', (
+            Choice('yes', lambda: delete_branch(
+                name,
+                safe_branch=safe_branch,
+                confirm=False
+            )),
+            Choice('no'),
+            Choice('quit', sys.exit),
+        ))
+    else:
+        if get_current_branch() == name:
+            checkout_branch(safe_branch)
+        run(f'git branch --delete --force {name}')
+
+
+def list_branches_merged_in(branch):
+    return {
+        name.replace('*', '').strip()
+        for name in run(f'git branch --merged {branch}').splitlines()
+    } - {branch}
+
+
+def rebase_branch_on(name):
+    run(f'git rebase {name}')
+
+
+def branch_exists(name):
+    return name in list_branches()
+
+
+def ask(question, choices):
+    answers = ', '.join(map(str, choices))
+    default_answer = choices[0].key + BACK
+    question = f'{question}? ({answers}) {default_answer}'
+    answer = input(question).lower().strip()
+    for choice in choices:
+        if choice.match(answer):
+            choice.execute()
+    choices[0].execute()
+
+
+class Choice:
+
+    def __init__(self, name, action=lambda: None):
+        self._name = name
+        self._key = name[0]
+        self._action = action
+
+    def __str__(self):
+        return self._name.replace(
+            self._key,
+            f'{UNDERLINE}{BOLD}{self._key}{NORMAL}'
+        )
+
+    def match(self, answer):
+        return answer.strip().lower() == self._key
+
+    @property
+    def key(self):
+        return self._key
+
+    def execute(self):
+        self._action()
+
+
+def pull_changes(reference_branch):
+    ask(f'Update {reference_branch}', (
+        Choice('yes', lambda: pull_branch(reference_branch)),
+        Choice('no'),
+        Choice('quit', sys.exit),
+    ))
+
+
+def delete_branches_merged_in(reference_branch):
+    merged_branches = list_branches_merged_in(reference_branch)
+    if merged_branches:
+        ask(f'Delete branches merged in {reference_branch}', (
+            Choice('all', lambda: [
+                delete_branch(branch, safe_branch=reference_branch, confirm=False)
+                for branch in merged_branches
+            ]),
+            Choice('confirm', lambda: [
+                delete_branch(branch, safe_branch=reference_branch, confirm=True)
+                for branch in merged_branches
+            ]),
+            Choice('no'),
+            Choice('quit', sys.exit),
+        ))
+
+
+def main():
+    master_branch = sys.argv[1]
+    current_branch = get_current_branch()
+    if current_branch != master_branch:
+        pull_changes(current_branch)
+        delete_branches_merged_in(master_branch)
+        checkout_branch(master_branch)
+
+    pull_changes(master_branch)
+    delete_branches_merged_in(master_branch)
+
+    if current_branch != master_branch and branch_exists(current_branch):
+        checkout_branch(current_branch)
+        ask(f'Rebase {current_branch} on {master_branch}', (
+            Choice('yes', lambda: rebase_branch_on(master_branch)),
+            Choice('no'),
+            Choice('quit', sys.exit),
+        ))
+
+
+if __name__ == "__main__":
+    main()
