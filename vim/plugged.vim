@@ -34,7 +34,6 @@ call plug#begin('~/.vim/plugged')
 
   " tree explorer
   Plug 'scrooloose/nerdtree'
-  map <C-o> :NERDTreeToggle<CR>
 
   " Displays the tags of the current file in a sidebar
   Plug 'majutsushi/tagbar'
