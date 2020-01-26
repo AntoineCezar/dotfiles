@@ -45,10 +45,6 @@ call plug#begin('~/.vim/plugged')
   " CodeStyle: Define and maintain consistent coding styles.
   Plug 'editorconfig/editorconfig-vim'
 
-  " Autocompletion: Management of tags files in Vim
-  Plug 'ludovicchabant/vim-gutentags'
-  let g:gutentags_cache_dir = $HOME . '/.cache/gutentags'
-
   " Linting: Asynchronous Lint Engine
   Plug 'w0rp/ale'
   " Load all plugins now.
