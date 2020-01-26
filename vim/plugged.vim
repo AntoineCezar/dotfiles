@@ -90,10 +90,6 @@ call plug#begin('~/.vim/plugged')
   let g:jedi#show_call_signatures = 0
   autocmd FileType python setlocal completeopt-=preview
 
-  " Python: folding
-  Plug 'tmhedberg/SimpylFold'
-  set foldlevelstart=3
-
   " Python: code formating
   Plug 'ambv/black'
 
