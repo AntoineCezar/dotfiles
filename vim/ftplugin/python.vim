@@ -13,3 +13,8 @@ set smarttab
 set expandtab
 " Number of spaces that a <Tab> counts for while performing editing operations, like inserting a <Tab> or using <BS>.
 set softtabstop=4
+
+if !exists(":Autoformat")
+  command Autoformat :ALEFix isort
+  noremap <F3> :Autoformat<CR>
+endif
