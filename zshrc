@@ -15,6 +15,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+fpath+=~/.config/zsh/completion.d
+
 # Load common shell configuration
 if [ -d ~/.config/sh.d ]; then
     for f in ~/.config/sh.d/*; do
