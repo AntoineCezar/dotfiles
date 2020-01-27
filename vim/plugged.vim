@@ -87,7 +87,8 @@ call plug#begin('~/.vim/plugged')
   autocmd FileType python setlocal completeopt-=preview
 
   " Python: code formating
-  Plug 'ambv/black'
+  Plug 'psf/black'
+  let g:black_virtualenv = '~/.local/pipx/venvs/black/'
 
   " Asciidoc: language support
   Plug 'asciidoc/vim-asciidoc'
