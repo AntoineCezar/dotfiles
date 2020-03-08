@@ -14,6 +14,8 @@ zstyle :compinstall filename '/home/acezar/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+[ -e "/usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme" ] &&
+    source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 
 fpath+=~/.config/zsh/completion.d
 
