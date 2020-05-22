@@ -51,6 +51,16 @@ call plug#begin('~/.vim/plugged')
   " Plugins need to be added to runtimepath before helptags can be generated.
   packloadall
 
+  " Dark powered asynchronous completion framework for neovim/Vim8
+  if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+  endif
+  let g:deoplete#enable_at_startup = 1
+
   " CodeSnippets: manager
   Plug 'SirVer/ultisnips'
 
