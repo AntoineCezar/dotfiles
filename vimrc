@@ -136,3 +136,12 @@ let powerline_pycmd = "py3"
 
 " Force write a file opened without root privilege
 cmap w!! w !sudo tee % > /dev/null
+
+command Autoformat echo "Autoformat is not defined"
+noremap <F3> :Autoformat<CR>
+
+command RunTestUnderCursor echo "RunTestUnderCursor is not defined"
+noremap <F4> :RunTestUnderCursor<CR>
+
+command GoToDefinition echo "GoToDefinition is not defined"
+noremap gd :GoToDefinition<CR>
