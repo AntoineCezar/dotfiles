@@ -64,6 +64,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
   endif
+  Plug 'deoplete-plugins/deoplete-jedi'
   let g:deoplete#enable_at_startup = 1
 
   " CodeSnippets: manager
