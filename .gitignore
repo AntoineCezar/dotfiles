@@ -1,8 +1,9 @@
 config/sh.d/*.local
 config/xinitrc.d/*.local.sh
 vim/.netrwhist
-vim/plugged/
+vim/backup/
 vim/ftdetect/
+vim/plugged/
 vim/swap/
 vim/view/
 gitconfig.local
