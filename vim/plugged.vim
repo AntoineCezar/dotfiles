@@ -53,6 +53,8 @@ call plug#begin('~/.vim/plugged')
   " Load all plugins now.
   " Plugins need to be added to runtimepath before helptags can be generated.
   packloadall
+  nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+  nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
   " Dark powered asynchronous completion framework for neovim/Vim8
   if has('nvim')
