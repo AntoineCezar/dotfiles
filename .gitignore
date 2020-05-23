@@ -1,9 +1,10 @@
+.mypy_cache/
 config/sh.d/*.local
 config/xinitrc.d/*.local.sh
+gitconfig.local
 vim/.netrwhist
 vim/backup/
 vim/ftdetect/
 vim/plugged/
 vim/swap/
 vim/view/
-gitconfig.local
