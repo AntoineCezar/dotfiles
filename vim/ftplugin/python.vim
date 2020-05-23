@@ -18,4 +18,4 @@ let b:ale_fixers = ['black', 'isort']
 let b:ale_linters = ['flake8', 'mypy']
 
 command! Autoformat :ALEFix
-command! GoToDefinition :ALEGoToDefinition
+command! GoToDefinition :call jedi#goto()
