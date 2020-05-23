@@ -47,8 +47,8 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 " Skin
-colorscheme hybrid_material
-" colorscheme gruvbox
+set termguicolors
+colorscheme base16-tomorrow-night
 
 "### Indentation ###
 " autoindent/smartindent n'est specifique a aucun langage et fonctionne en general moins bien que filetype

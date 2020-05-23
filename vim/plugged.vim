@@ -4,8 +4,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/vim-plug'
 
   " Color schemes
-  Plug 'kristijanhusak/vim-hybrid-material'
-  Plug 'morhetz/gruvbox'
+  Plug 'chriskempson/base16-vim'
 
   " Status/tabline
   Plug 'vim-airline/vim-airline'
