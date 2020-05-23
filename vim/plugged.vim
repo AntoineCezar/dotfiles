@@ -129,9 +129,6 @@ call plug#begin('~/.vim/plugged')
   " reStructuredText: language support
   Plug 'marshallward/vim-restructuredtext'
 
-  " Markdown: language support
-  Plug 'plasticboy/vim-markdown'
-
   " PlantUML: language support
   Plug 'aklt/plantuml-syntax'
 
