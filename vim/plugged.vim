@@ -7,6 +7,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'kristijanhusak/vim-hybrid-material'
   Plug 'morhetz/gruvbox'
 
+  " Status/tabline
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+
   " Git: A Git wrapper
   Plug 'tpope/vim-fugitive'
 
