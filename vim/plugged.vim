@@ -99,10 +99,6 @@ call plug#begin('~/.vim/plugged')
   let g:jedi#show_call_signatures = 0
   autocmd FileType python setlocal completeopt-=preview
 
-  " Python: code formating
-  Plug 'psf/black'
-  let g:black_virtualenv = '~/.local/pipx/venvs/black/'
-
   " Asciidoc: language support
   Plug 'asciidoc/vim-asciidoc'
 
