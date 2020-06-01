@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/vim-plug'
 
   " Color schemes
-  Plug 'chriskempson/base16-vim'
+  Plug 'kristijanhusak/vim-hybrid-material'
 
   " Status/tabline
   Plug 'vim-airline/vim-airline'
@@ -27,7 +27,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-eunuch'
 
   " Git: Shows a git diff in the 'gutter' (sign column)
-  Plug 'airblade/vim-gitgutter'
+  " Plug 'airblade/vim-gitgutter'
 
   " Full path fuzzy file, buffer, mru, tag, ... finder for Vim
   Plug 'ctrlpvim/ctrlp.vim'
