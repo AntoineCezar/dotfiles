@@ -1,3 +1,5 @@
-PATH="$HOME/.local/bin:$PATH"
+#!/usr/bin/env sh
+
+[[ -d "$HOME/.local/bin" ]] && PATH="$HOME/.local/bin:$PATH"
 
 export EDITOR="vim"
