@@ -47,7 +47,6 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 " Skin
-set termguicolors
 colorscheme hybrid_reverse
 
 "### Indentation ###
