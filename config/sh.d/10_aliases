@@ -1,9 +1,7 @@
+#!/usr/bin/env sh
+
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 
 alias rm="rm -i"
 alias ll="ls -l"
-
-alias burniso="sudo cdrecord -v dev=/dev/sr0"
-
-alias mdstat="cat /proc/mdstat"
