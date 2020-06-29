@@ -13,7 +13,9 @@ bin: $(BIN_FILES)
 sh: $(SHD_FILES)
 
 .PHONY: zsh
-zsh: $(ZSHD_FILES)
+zsh: ~/.zshrc $(ZSHD_FILES)
+~/.zshrc: zshrc
+	ln -s $(PWD)/zshrc $@
 
 .PHONY: nvim
 nvim: $(NVIM_FILES)
