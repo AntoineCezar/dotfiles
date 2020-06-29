@@ -55,6 +55,7 @@ call plug#begin('~/.vim/plugged')
   packloadall
   nmap <silent> <C-k> <Plug>(ale_previous_wrap)
   nmap <silent> <C-j> <Plug>(ale_next_wrap)
+  command! Autoformat :ALEFix
   command! GoToDefinition :ALEGoToDefinition
 
   " Dark powered asynchronous completion framework for neovim/Vim8
