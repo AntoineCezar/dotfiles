@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+# needed by gnome-terminal to preserve path
+[[ -f /etc/profile.d/vte.sh ]] && . /etc/profile.d/vte.sh
+
 [[ -d "$HOME/.local/bin" ]] && PATH="$HOME/.local/bin:$PATH"
 [[ -d "$HOME/.cargo/bin" ]] && PATH="$HOME/.cargo/bin:$PATH"
 
