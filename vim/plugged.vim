@@ -138,9 +138,6 @@ call plug#begin('~/.vim/plugged')
   " VueJs: language support
   Plug 'posva/vim-vue'
 
-  " Manage simple todo lists
-  Plug 'vitalk/vim-simple-todo'
-
   " Sessions: automated creation and restoration
   Plug 'zhimsel/vim-stay'
 
