@@ -48,34 +48,10 @@ call plug#begin('~/.vim/plugged')
   " CodeStyle: Define and maintain consistent coding styles.
   Plug 'editorconfig/editorconfig-vim'
 
-  " Linting: Asynchronous Lint Engine
-  Plug 'w0rp/ale'
-  " Load all plugins now.
-  " Plugins need to be added to runtimepath before helptags can be generated.
-  packloadall
-  nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-  nmap <silent> <C-j> <Plug>(ale_next_wrap)
-  command! Autoformat :ALEFix
-  command! GoToDefinition :ALEGoToDefinition
-
-  " Dark powered asynchronous completion framework for neovim/Vim8
-  if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-  endif
-  Plug 'deoplete-plugins/deoplete-jedi'
-  let g:deoplete#enable_at_startup = 1
-  autocmd CompleteDone * silent! pclose!
-
-  " CodeSnippets: manager
-  Plug 'SirVer/ultisnips'
-
-  " CodeSnippets: snippets
-  " Used by ultisnips
-  Plug 'honza/vim-snippets'
+  " Intellisense engine for Vim8 & Neovim,
+  " full language server protocol support as VSCode 
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  source ~/.vim/coc.vim
 
   " Elm: language support
   Plug 'ElmCast/elm-vim'
@@ -97,13 +73,6 @@ call plug#begin('~/.vim/plugged')
 
   " Python: syntax highlighting
   Plug 'vim-python/python-syntax'
-
-  " Python: jedi autocompletion
-  Plug 'davidhalter/jedi-vim'
-  let g:jedi#popup_on_dot = 0
-  let g:jedi#popup_select_first = 0
-  let g:jedi#show_call_signatures = 0
-  autocmd FileType python setlocal completeopt-=preview
 
   " Asciidoc: language support
   Plug 'asciidoc/vim-asciidoc'
