@@ -5,3 +5,5 @@ alias ls="ls --color=auto"
 
 alias rm="rm -i"
 alias ll="ls -l"
+
+alias hexdump="hexdump -C"
