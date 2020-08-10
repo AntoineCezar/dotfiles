@@ -89,6 +89,8 @@ set showmatch
 "### UI ###
 " When 'wildmenu' is on, command-line completion operates in an enhanced mode.
 set wildmenu
+" display line number
+set number
 " Show (partial) command in the last line of the screen.
 set showcmd
 " Highlight the screen line of the cursor. Will make screen redrawing slower.
