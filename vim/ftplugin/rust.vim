@@ -1,11 +1,7 @@
-let b:rustfmt_autosave = 1
-
-let b:ale_fixers = ['rustfmt']
-let b:ale_linters = ['analyzer']
+let b:rustfmt_autosave=1
 
 command! Autoformat :RustFmt
 command! RunTestUnderCursor :RustTest
-command! GoToDefinition :ALEGoToDefinition
 
 if !exists(':RustCheck')
   function! s:RustCheck()
