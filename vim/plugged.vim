@@ -110,7 +110,4 @@ call plug#begin('~/.vim/plugged')
   " VueJs: language support
   Plug 'posva/vim-vue'
 
-  " Sessions: automated creation and restoration
-  Plug 'zhimsel/vim-stay'
-
 call plug#end()
