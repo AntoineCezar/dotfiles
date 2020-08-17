@@ -144,4 +144,3 @@ cmap w!! w !sudo tee % > /dev/null
 
 noremap <F3> :Autoformat<CR>
 noremap <F4> :RunTestUnderCursor<CR>
-noremap gd :GoToDefinition<CR>
