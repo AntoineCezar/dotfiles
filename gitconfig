@@ -15,6 +15,7 @@
     st = status
     pop = stash pop
     orphan = checkout --orphan
+    unstage = restore --staged
     # Push a not yet published branch and set upstream
     publish = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
 
